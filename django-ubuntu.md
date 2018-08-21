@@ -122,7 +122,6 @@ Create a custom config file for our gunicorn process:
 
 ```
 touch /etc/supervisor/conf.d/your_project.conf
-
 ```
 This will be loaded automatically from /etc/supervisor/supervisor.conf.
 
@@ -144,7 +143,6 @@ Now you can run the supervisorctl command and interact with the processes. You m
 sudo systemctl enable supervisor
 sudo systemctl start supervisor
 supervisorctl restart all
-
 ```
 
 
