@@ -10,6 +10,7 @@ apt-get install mercurial python-pip python3-venv nginx supervisor
 adduser django
 su - django
 ```
+
 ###as Django user
 ```
 ssh-keygen
@@ -40,6 +41,7 @@ STATIC_ROOT="/home/django/static"
 MEDIA_ROOT="/home/django/media"
 ```
 Remember to collectstatic or migrate or other django-stuff
+
 ##Gunicorn 
 ```
 cd /home/django
@@ -63,11 +65,13 @@ debug = False
 pythonpath = '/home/django/your_project'
 raw_env = ['DJANGO_SETTINGS_MODULE=your_project.settings.production_server']
 ```
+
 ###as Root:
 ```
 chown root:django /home/django/gunicorn_config.py
 chmod 640 /home/django/gunicorn_config.py
 ```
+
 ##Nginx
 ```
 touch /etc/nginx/sites-available/your_project
@@ -112,6 +116,7 @@ server {
 ```
 systemctl restart nginx
 ```
+
 ##Supervisor
 Create a custom config file for our gunicorn process:
 
@@ -142,4 +147,5 @@ supervisorctl restart all
 
 ```
 
-###GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
+
+##GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
