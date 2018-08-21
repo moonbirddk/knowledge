@@ -11,7 +11,7 @@ adduser django
 su - django
 ```
 
-###as Django user
+### as Django user
 ```
 ssh-keygen
 cat .ssh/id_rsa.pub
@@ -42,7 +42,7 @@ MEDIA_ROOT="/home/django/media"
 ```
 Remember to collectstatic or migrate or other django-stuff
 
-##Gunicorn 
+## Gunicorn 
 ```
 cd /home/django
 source venv/bin/activate (if not already sourced)
@@ -66,13 +66,13 @@ pythonpath = '/home/django/your_project'
 raw_env = ['DJANGO_SETTINGS_MODULE=your_project.settings.production_server']
 ```
 
-###as Root:
+### as Root:
 ```
 chown root:django /home/django/gunicorn_config.py
 chmod 640 /home/django/gunicorn_config.py
 ```
 
-##Nginx
+## Nginx
 ```
 touch /etc/nginx/sites-available/your_project
 ln -s /etc/nginx/sites-available/your_project /etc/nginx/sites-enabled/your_project
@@ -117,7 +117,7 @@ server {
 systemctl restart nginx
 ```
 
-##Supervisor
+## Supervisor
 Create a custom config file for our gunicorn process:
 
 ```
@@ -148,4 +148,4 @@ supervisorctl restart all
 ```
 
 
-##GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
+### GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
