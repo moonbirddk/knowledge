@@ -5,4 +5,4 @@ A collection of tutorials, information and general knowledge for Moonbird
 
 <a href="django-ubuntu">DJANGO SERVER TUTO</a>
 
-<a href="ssl-ubuntu">Install SSL on Ubuntu(nginx)</a>
+<a href="ssl-ubuntu">INSTALL SSL on UBUNTU(nginx)</a>
