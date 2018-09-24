@@ -146,11 +146,8 @@ supervisorctl restart all
 ```
 
 
-### GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
-
-
-# RabbitMQ
-Install RabbitMQ with this:
+## RabbitMQ
+RabbitMQ acts as a queue for the celery tasks. Install RabbitMQ with this:
 ```
 apt-get install -y erlang
 apt-get install rabbitmq-server
@@ -163,12 +160,13 @@ To check the status of the rabbitmq service
 ```systemctl status rabbitmq-server```
 
 
-# Celery
+## Celery
 If you haven’t already installed Celery through the requirements file, install Celery as `su - django` and activate the virtual environment `source venv/bin/active`. 
 Then run `pip install Celery`
 
 Add this to your settings file.
 ```
+...
 CELERY_BROKER_URL = 'amqp://localhost'
 ```
 
@@ -192,7 +190,7 @@ from .celery import app as celery_app
 __all__ = ['celery_app']
 ```
 
-Add this  config to the supervisor config file in `/etc/supervisor/conf.d/akvariet.conf`
+Add this  config to the supervisor config file in `/etc/supervisor/conf.d/your_project.conf`
 ```
 ...
 
@@ -224,3 +222,5 @@ sudo supervisorctl reread
 sudo supervisorctl update
 sudo supervisorctl restart celery
 ```
+
+# GO MAKE A CUP OF COFFEE, YOUR SITE IS READY TO GO
