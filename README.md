@@ -11,15 +11,4 @@ A collection of tutorials, information and general knowledge for Moonbird
 
 <a href="ssl-ubuntu-apache">INSTALL SSL on UBUNTU(apache)</a>
 
-<style>
-#logo {
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	opacity: 0.03;
-	transform: translate(-50%, -50%);
-	height: 200px;
-	width: 200px;
-}
-</style>	
-<img id="logo" src="logo-img.svg" />
+<img id="logo" src="logo-img.svg" style="position: fixed;left: 50%;top: 50%;opacity: 0.03;transform: translate(-50%, -50%);height: 200px;width: 200px;"/>
